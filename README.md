@@ -242,6 +242,10 @@ Get a free key: https://aistudio.google.com/apikey
 ```
 
 ---
+## Architecture
+<img width="1536" height="1024" alt="arch" src="https://github.com/user-attachments/assets/d1d6eb59-501f-4a44-81d0-8f75b3421ab9" />
+
+
 
 ## Assumptions & Limitations
 
