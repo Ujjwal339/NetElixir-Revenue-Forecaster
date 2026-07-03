@@ -247,7 +247,26 @@ Get a free key: https://aistudio.google.com/apikey
 ## Architecture
 <img width="1536" height="1024" alt="arch" src="https://github.com/user-attachments/assets/d1d6eb59-501f-4a44-81d0-8f75b3421ab9" />
 
+## Key Features
 
+- Probabilistic Revenue Forecasting (P10 / P50 / P90)
+
+- Multi-platform support
+  - Google Ads
+  - Microsoft Ads
+  - Meta Ads
+
+- Interactive Budget Simulator
+
+- SHAP Explainability
+
+- Isolation Forest Anomaly Detection
+
+- AI-generated Executive Forecast Summary
+
+- Rule-based Offline AI Fallback
+
+- Interactive Streamlit Dashboard
 
 ## Assumptions & Limitations
 
