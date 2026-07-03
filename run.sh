@@ -1,31 +1,29 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
-DATA_DIR=$1
-MODEL_PATH=$2
-OUTPUT_PATH=$3
+DATA_DIR="${1:-./data}"
+MODEL_PATH="${2:-./pickle/model.pkl}"
+OUTPUT_PATH="${3:-./output/predictions.csv}"
 
-echo "========================================="
-echo "NetElixir Revenue Forecaster"
-echo "========================================="
+mkdir -p "$(dirname "$OUTPUT_PATH")"
 
-echo
 echo "Generating features..."
 
 python src/generate_features.py \
+    --mode inference \
     --data-dir "$DATA_DIR" \
     --output features.parquet
 
-echo
 echo "Running prediction..."
 
 python src/predict.py \
     --features features.parquet \
-    --model-path "$MODEL_PATH" \
+    --model "$MODEL_PATH" \
     --output "$OUTPUT_PATH"
 
 echo
-echo "Done!"
-echo "Predictions saved to:"
+echo "Done."
+echo
+echo "Predictions written to:"
 echo "$OUTPUT_PATH"
