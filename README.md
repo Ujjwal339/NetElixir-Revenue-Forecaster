@@ -35,7 +35,7 @@ AI-assisted causal summaries are generated via **Gemini 2.5 Flash**, with an aut
 
 ## Quickstart
 
-**Python 3.11+**
+**Python 3.12+**
 
 ```bash
 git clone https://github.com/Ujjwal339/Netelixir-Revenue-Forecaster.git
@@ -273,7 +273,7 @@ plotly==5.24.0
 requests==2.32.3
 ```
 
-**Python version:** 3.11
+**Python version:** 3.12
 
 No internet access required at run time. All models are pre-trained and committed.
 
