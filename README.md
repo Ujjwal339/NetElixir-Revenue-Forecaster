@@ -39,7 +39,7 @@ AI-assisted causal summaries are generated via **Gemini 2.5 Flash**, with an aut
 
 ```bash
 git clone https://github.com/Ujjwal339/Netelixir-Revenue-Forecaster.git
-cd netelixir-forecasting
+cd Netelixir-Revenue-Forecaster
 pip install -r requirements.txt
 ```
 
@@ -69,7 +69,7 @@ Opens at `http://localhost:8501`
 ## Repository Structure
 
 ```
-netelixir-forecasting/
+Netelixir-Revenue-Forecaster/
 ├── run.sh                          # Automated pipeline entry point (required)
 ├── requirements.txt                # Pinned dependencies (required)
 ├── README.md
