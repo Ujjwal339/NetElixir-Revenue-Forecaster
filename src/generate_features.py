@@ -1169,17 +1169,34 @@ def main():
         default="train",
     )
 
-    args = parser.parse_args()
-
-    output = (
-        "features_train.parquet"
-        if args.mode == "train"
-        else "features.parquet"
+    parser.add_argument(
+        "--data-dir",
+        default="./data",
+        help="Directory containing campaign CSV files.",
     )
 
+    parser.add_argument(
+        "--output",
+        default=None,
+        help="Output feature parquet file.",
+    )
+
+    args = parser.parse_args()
+
+    if args.output is not None:
+
+        output_path = args.output
+
+    else:
+
+        if args.mode == "train":
+            output_path = "features_train.parquet"
+        else:
+            output_path = "features.parquet"
+
     generate_features(
-        data_dir="data",
-        output_file=output,
+        data_dir=args.data_dir,
+        output_file=output_path,
         mode=args.mode,
     )
 
