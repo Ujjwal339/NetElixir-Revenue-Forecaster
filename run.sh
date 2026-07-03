@@ -1,53 +1,31 @@
 #!/bin/bash
 
-# ==========================================================
-# NetElixir Revenue Forecaster
-# Run Script
-# ==========================================================
+set -e
 
-echo "==============================================="
-echo " NetElixir Revenue Forecaster"
-echo "==============================================="
-echo
+DATA_DIR=$1
+MODEL_PATH=$2
+OUTPUT_PATH=$3
 
-# ----------------------------------------------------------
-# Check Virtual Environment
-# ----------------------------------------------------------
-
-if [ -z "$VIRTUAL_ENV" ] && [ -z "$CONDA_DEFAULT_ENV" ]; then
-    echo "⚠️  No Python virtual environment detected."
-    echo "Please activate your environment first."
-    echo
-    echo "Example:"
-    echo "conda activate netelixier"
-    echo
-    exit 1
-fi
-
-echo "Using Python:"
-python --version
-echo
-
-# ----------------------------------------------------------
-# Install Dependencies
-# ----------------------------------------------------------
-
-echo "Installing required packages..."
-pip install -r requirements.txt
+echo "========================================="
+echo "NetElixir Revenue Forecaster"
+echo "========================================="
 
 echo
+echo "Generating features..."
 
-# ----------------------------------------------------------
-# Create Output Directory
-# ----------------------------------------------------------
+python src/generate_features.py \
+    --data-dir "$DATA_DIR" \
+    --output features.parquet
 
-mkdir -p output
-
-# ----------------------------------------------------------
-# Launch Application
-# ----------------------------------------------------------
-
-echo "Starting Streamlit application..."
 echo
+echo "Running prediction..."
 
-streamlit run app/streamlit_app.py
+python src/predict.py \
+    --features features.parquet \
+    --model-path "$MODEL_PATH" \
+    --output "$OUTPUT_PATH"
+
+echo
+echo "Done!"
+echo "Predictions saved to:"
+echo "$OUTPUT_PATH"
