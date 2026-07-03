@@ -1,12 +1,5 @@
 # NetElixir Revenue Forecaster
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-
-![Streamlit](https://img.shields.io/badge/Streamlit-Live-red)
-
-![XGBoost](https://img.shields.io/badge/XGBoost-Quantile-green)
-
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
+## 🚀 Live Demo
 [![Live Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://netelixir-revenue-forecaster.streamlit.app/)
 ### AIgnition 3.0 Hackathon — Probabilistic Revenue Forecasting for E-commerce Marketing
 
