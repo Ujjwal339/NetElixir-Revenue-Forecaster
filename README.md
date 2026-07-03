@@ -189,6 +189,8 @@ Single-point forecasts are misleading for marketing budget decisions. Quantile r
 ## Demo
 
 <img width="1845" height="921" alt="Screenshot From 2026-07-03 18-02-56" src="https://github.com/user-attachments/assets/69997638-c6d4-4967-a7c7-c402b130d82f" />
+<img width="1845" height="921" alt="image" src="https://github.com/user-attachments/assets/6d2e45aa-869a-4a40-9aaa-ffa112b2fb74" />
+
 ## AI Integration
 
 `llm_insights.py` integrates **Gemini 2.5 Flash** (free tier) to generate:
