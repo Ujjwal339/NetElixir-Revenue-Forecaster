@@ -314,16 +314,20 @@ https://aistudio.google.com/apikey
 ## Dependencies
 
 ```
-pandas==2.2.2
-numpy==1.26.4
-xgboost==2.1.1
-scikit-learn==1.5.1
-pyarrow==17.0.0
-shap==0.46.0
-google-generativeai==0.8.3
-streamlit==1.38.0
-plotly==5.24.0
-requests==2.32.3
+streamlit>=1.48.1
+pandas>=2.2
+numpy>=2.2
+scikit-learn>=1.7
+xgboost>=3.0
+plotly>=6.0
+pyarrow>=18.0
+shap>=0.48
+matplotlib>=3.10
+google-generativeai>=0.8.5
+joblib>=1.5
+tqdm>=4.67
+requests>=2.32
+cloudpickle>=3.1
 ```
 
 **Python version:** 3.12
