@@ -1,0 +1,16 @@
+streamlit==1.48.1
+pandas==2.3.1
+numpy==2.2.6
+scikit-learn==1.7.1
+xgboost==3.0.4
+plotly==6.3.0
+pyarrow==21.0.0
+shap==0.48.0
+matplotlib==3.10.5
+google-generativeai==0.8.5
+joblib==1.5.1
+tqdm==4.67.1
+requests==2.32.4
+cloudpickle==3.1.2
+numba==0.61.2
+llvmlite==0.44.0
