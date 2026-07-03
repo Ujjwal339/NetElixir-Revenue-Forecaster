@@ -195,19 +195,51 @@ Single-point forecasts are misleading for marketing budget decisions. Quantile r
 
 ## AI Integration
 
-`llm_insights.py` integrates **Gemini 2.5 Flash** (free tier) to generate:
+The application combines **machine learning** with **generative AI** to provide actionable business insights while remaining fully functional without external AI services.
 
-- **Executive forecast summaries** — explains why revenue is expected to rise or fall
-- **Anomaly detection** — uses Isolation Forest to find statistical outliers in historical data, then generates LLM narratives for each anomaly
-- **Risk identification** — budget pacing, attribution lag, seasonality warnings
-- **Budget allocation recommendations** — channel-level rebalancing advice
+### Executive Forecast Summary
 
-Set `GEMINI_API_KEY` in your environment or paste it into the Streamlit sidebar.
-Falls back to deterministic rule-based summaries with no API key required.
+The dashboard optionally integrates **Gemini 2.5 Flash** to generate executive-friendly explanations of forecast results, including:
 
-Get a free key: https://aistudio.google.com/apikey
+- Revenue outlook and expected ROAS
+- Historical vs forecast performance comparison
+- Forecast confidence and uncertainty analysis
+- Seasonal trends and business risks
+- Budget allocation recommendations
+- Strategic marketing insights
 
----
+If a Gemini API key is not provided, the application automatically switches to a **deterministic rule-based insight engine**, ensuring the dashboard remains fully operational.
+
+### Historical Anomaly Detection
+
+Historical campaign anomalies are detected using an **Isolation Forest** model based on:
+
+- Campaign Spend
+- Revenue
+- ROAS
+
+Detected anomalies are presented as structured business reports highlighting:
+
+- Date and affected marketing channel
+- Spend, Revenue, and ROAS
+- Performance observations
+- Possible business causes
+- Recommended follow-up actions
+
+Unlike the executive summary, anomaly detection is **fully deterministic** and does **not** require an LLM, ensuring consistent and reproducible results.
+
+### Gemini API (Optional)
+
+To enable AI-generated executive summaries, provide a **Gemini API Key** either:
+
+- Through the Streamlit sidebar, or
+- By setting the `GEMINI_API_KEY` environment variable.
+
+Without an API key, the application automatically falls back to its built-in analytics engine with no loss of forecasting functionality.
+
+Get a free Gemini API key:
+
+https://aistudio.google.com/apikey
 
 ## Architecture
 
